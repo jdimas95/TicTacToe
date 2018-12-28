@@ -17,10 +17,29 @@ body {
     position: relative;
 }
 
-#player-info {
+.player-info {
+     background-color: white;
+     font-family: "Lucida Console", Monaco, monospace;
+}
+
+#player-start {
     position: relative;
     margin: 1em auto;
     height: 3em;
     width: 300px;
-    background-color: white;
+}
+
+#start {
+    margin-left: 20px;
+}
+
+#players {
+    margin: 0 auto;
+}
+
+.active {
+    background-color: darkgray;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-family: "Lucida Console", Monaco, monospace;
+
 }
