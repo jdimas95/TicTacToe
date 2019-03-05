@@ -16,7 +16,16 @@ var player2 = {
 
 
 
-document.querySelector('#Start').addEventListener('click', initNewGame());
+document.querySelector('#Start').addEventListener('click', initNewGame);
+
+function initNewGame() {
+    turns = 0;
+    marked = [0, 1, 2, 3, 4, 5, 6, 7, 8];
+    document.querySelector('#s0, #s1, #s2, #s3, #s4, #s5, #s6, #s7, #s8').src = 'emptySpace.png';
+    document.getElementById('player1').classList.add('active');
+    player1.isActive = true;    
+}
+
 
 function marking (element) {
     if (player1.isActive === true && turns < 9){
@@ -38,14 +47,7 @@ function marking (element) {
 //var test = document.querySelector('#s1').id;
 //console.log(test);
 
-function initNewGame() {
-    turns = 0;
-    marked = [0, 1, 2, 3, 4, 5, 6, 7, 8];
-    document.querySelector('#s0, #s1, #s2, #s3, #s4, #s5, #s6, #s7, #s8').src = 'emptySpace.png';
-    document.getElementById('player1').classList.add('active');
-    player1.isActive = true;
-    
-}
+
 
 function toggleActive(){
     if (player1.isActive === true) {
@@ -73,6 +75,7 @@ function checkWin(){
         marked[2] === marked[4] && marked[4] === marked[6]) {
         turns = 10;
         console.log('You WIN!');
+        document.querySelector
         console.log(marked);
     }
 }
